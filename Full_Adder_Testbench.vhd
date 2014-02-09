@@ -1,16 +1,16 @@
 --------------------------------------------------------------------------------
--- Company: 
--- Engineer:
+-- Company: USAFA
+-- Engineer: Jeremy Gruszka
 --
 -- Create Date:   11:08:00 02/06/2014
--- Design Name:   
--- Module Name:   C:/Users/C16Jeremy.Gruszka/Documents/ECE/281/CE2/SelfCheckingTestBench.vhd
--- Project Name:  CE2
+-- Design Name:   Full adder testbench
+-- Module Name:   Full_Adder_Testbench.vhd
+-- Project Name:  Lab2
 -- Target Device:  
 -- Tool versions:  
 -- Description:   
 -- 
--- VHDL Test Bench Created by ISE for module: Decoder_Structural
+-- VHDL Test Bench Created by ISE for module: Full_Adder
 -- 
 -- Dependencies:
 -- 
