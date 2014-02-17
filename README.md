@@ -45,5 +45,5 @@ My design is correct.  I know this because when I compare input to output, my tr
 9.	Fixed this by making the final carry an output in the vhdl program.  Program now works perfectly for B functionality on the NEXYS
 10.	Attempting to work on A functionality.  No idea how to change inputs and outputs depending on whether or not a button is pushed.  Neither book nor internet is helping once again.
 11.	Decided to go back to self checking testbench.  Figured out how to use for loops, and I’m trying to create a series of 4 for loops that will simulate inputs, one loop for each bit.  Not working right now.
-12.	Went back to getting subtractor capability.  After thinking for awhile, I  decided I should be able to have a button input that knows when a button is pressed and decide the value of B depending on that.  This worked, and I now have both adder and subtractor capability.
+12.	Went back to getting subtractor capability.  After thinking for awhile, I  decided I should be able to have a button input that knows when a button is pressed and decide the value of B depending on that.  The subtractor is simply an adder with not_B instead of B.  This worked, and I now have both adder and subtractor capability.
 
