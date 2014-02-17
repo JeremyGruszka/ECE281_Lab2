@@ -1,7 +1,7 @@
 ECE281_Lab2
 ===========
 
-##Lab 2
+##Lab 2 Prelab
 
 #### Truth Table:
 Cin | A | B | Cout | Sum
@@ -30,6 +30,8 @@ Sum = A xor B xor C
 
 #### Testbench Waveform Analysis
 My design is correct.  I know this because when I compare input to output, my truth table, schematic, and testbench waveform all come out with the same answers, showing that my work is correct.
+
+##Lab 2 Prelab
 
 #### Main Lab Debugging
 1.	I know I have to combine 4 full adders in series to make a 4 bit adder, but I cant figure out how to put Cin to Cout
