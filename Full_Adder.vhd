@@ -39,6 +39,7 @@ end Full_Adder;
 
 architecture Behavioral of Full_Adder is
 
+
 begin
 
 Cout <= (A and B) or (Cin and B) or (Cin and A) or (Cin and A and B);
