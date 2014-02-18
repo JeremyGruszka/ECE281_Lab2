@@ -30,16 +30,16 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Full_Adder_4Bit is
-    Port ( A : in  STD_LOGIC_VECTOR (3 downto 0);
-           B : in  STD_LOGIC_VECTOR (3 downto 0);
-           Sum : out  STD_LOGIC_VECTOR (3 downto 0);
-			  Overflow : out STD_LOGIC;
-			  Button : in STD_LOGIC);
+    Port ( A : in  STD_LOGIC_VECTOR (3 downto 0); --used to hold all 4 bits of A
+           B : in  STD_LOGIC_VECTOR (3 downto 0); --used to hold all 4 bits of B
+           Sum : out  STD_LOGIC_VECTOR (3 downto 0); --used to hold all 4 bits of Sum
+			  Overflow : out STD_LOGIC; --detects overflow
+			  Button : in STD_LOGIC); --determines addition or subtraction
 end Full_Adder_4Bit;
 
 architecture Structural of Full_Adder_4Bit is
 
-signal C, Bin : STD_LOGIC_VECTOR(3 downto 0);
+signal C, Bin : STD_LOGIC_VECTOR(3 downto 0); --C is used to relate Cin and Cout, B is determined by button
 	 
 	 component Full_Adder is 
 	 port (A : in STD_LOGIC;
@@ -51,29 +51,33 @@ signal C, Bin : STD_LOGIC_VECTOR(3 downto 0);
 
 begin
 
-	 Bin <= (not B) when (Button = '1') else B;
+	 Bin <= (not B) when (Button = '1') else B; --does subtraction if the button is pushed 
 
+--first bit
 	 Sum1_Full_Adder: Full_Adder Port Map(
 		A => A(0),
       B => Bin(0),
       Cin => C(0),
       Cout => C(1),
       Sum => Sum(0));
-		
+
+--second bit		
 	 Sum2_Full_Adder: Full_Adder Port Map(
 		A => A(1),
       B => Bin(1),
       Cin => C(1),
       Cout => C(2),
       Sum => Sum(1));
-		
+
+--third bit		
 	 Sum3_Full_Adder: Full_Adder Port Map(
 		A => A(2),
       B => Bin(2),
       Cin => C(2),
       Cout => C(3),
       Sum => Sum(2));
-		
+
+--fourth bit		
 	 Sum4_Full_Adder: Full_Adder Port Map(
 		A => A(3),
       B => Bin(3),

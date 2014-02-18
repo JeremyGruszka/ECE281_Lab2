@@ -41,7 +41,7 @@ architecture Behavioral of Full_Adder is
 
 
 begin
-
+--set up so that Cin is MSB and B is LSB
 Cout <= (A and B) or (Cin and B) or (Cin and A) or (Cin and A and B);
 Sum <= A xor B xor Cin;
 

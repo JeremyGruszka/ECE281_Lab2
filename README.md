@@ -33,6 +33,12 @@ My design is correct.  I know this because when I compare input to output, my tr
 
 ##Lab 2 Main Lab
 
+#### Final Schematic
+
+![alt text](https://raw2.github.com/JeremyGruszka/ECE281_Lab2/master/final_schematic.png "Schematic")
+
+Where C3 is my overflow variable.  It corresponds to LED R4 on my NEXYS 2 board.
+
 #### Main Lab Debugging
 1.	I know I have to combine 4 full adders in series to make a 4 bit adder, but I cant figure out how to put Cin to Cout
 2.	Realized that I need to make a C signal that is a std logic vector
