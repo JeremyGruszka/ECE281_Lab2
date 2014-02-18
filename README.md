@@ -21,7 +21,7 @@ Sum = A xor B xor C
 
 #### Schematic
 
-![alt text](https://raw2.github.com/JeremyGruszka/ECE281_Lab2/master/Schematic.png "Schematic")
+![alt text](https://raw2.github.com/JeremyGruszka/ECE281_Lab2/master/schematic.png "Schematic")
 
 #### Testbench Waveform:
 
