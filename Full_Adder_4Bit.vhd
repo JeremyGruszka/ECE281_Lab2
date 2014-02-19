@@ -18,7 +18,7 @@
 --
 ----------------------------------------------------------------------------------
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -33,6 +33,7 @@ entity Full_Adder_4Bit is
     Port ( A : in  STD_LOGIC_VECTOR (3 downto 0); --used to hold all 4 bits of A
            B : in  STD_LOGIC_VECTOR (3 downto 0); --used to hold all 4 bits of B
            Sum : out  STD_LOGIC_VECTOR (3 downto 0); --used to hold all 4 bits of Sum
+			  Cout : out STD_LOGIC;
 			  Overflow : out STD_LOGIC; --detects overflow
 			  Button : in STD_LOGIC); --determines addition or subtraction
 end Full_Adder_4Bit;
@@ -57,7 +58,7 @@ begin
 	 Sum1_Full_Adder: Full_Adder Port Map(
 		A => A(0),
       B => Bin(0),
-      Cin => C(0),
+      Cin => Button,
       Cout => C(1),
       Sum => Sum(0));
 
@@ -82,7 +83,9 @@ begin
 		A => A(3),
       B => Bin(3),
       Cin => C(3),
-      Cout => Overflow,
+      Cout => Cout,
       Sum => Sum(3));
+	
+	Overflow <= C(3) xor Button;
 		
 end Structural;
